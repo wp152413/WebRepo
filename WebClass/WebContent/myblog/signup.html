@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원 가입하기</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/blog.css">
+ <link rel="stylesheet" type="text/css" href="../css/footer.css"> 
+  
+  
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="index.html">HOME</a></li>
+	        <li><a href="login.html">LOGIN</a></li>
+	        <li><a href="signup.html">SIGN UP</a></li>
+	        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
+	
+	
+	<div class="container">
+	  <h3 class="text-center">SIGN UP</h3>
+	  <p class="text-center"><em>Please enter your information</em></p>
+	  <div class="row test">
+	    <div class="col-md-4">
+	      <p>Nice to meet you!</p>
+	      <p><span class="glyphicon glyphicon-map-marker"></span>Ansan, Korea</p>
+	      <p><span class="glyphicon glyphicon-phone"></span>Phone: +82-10-1311-2413</p>
+	      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
+	    </div>
+	    <div class="col-md-8"> 
+		      <form class="form-horizontal" id="SignUp_form">
+		  		<div class="form-group">
+			    	<h5>Grade</h5>	
+		          	<input type="radio" name="grade" value="1" checked>1학년<br>
+				  	<input type="radio" name="grade" value="2" checked>2학년<br>
+				  	<input type="radio" name="grade" value="3" checked>3학년<br>	
+			    	
+		  		</div>
+		  		<div class="form-group">
+		    		<h5>Class</h5>
+				    <select name="list" class="form-control" required>
+						<option value="">select</option>
+						<option value="eb">1반 (e-비즈니스과)</option>
+						<option value="dc">2반 (디지털콘텐츠과)</option>
+						<option value="wp">3반 (웹프로그래밍과)</option>
+						<option value="wp">4반 (웹프로그래밍과)</option>
+						<option value="hd">5반 (해킹방어과)</option>
+						<option value="hd">6반 (해킹방어과)</option>		
+					</select>
+		  		</div>
+		  		<div class="form-group">        
+		    		<h5>Number</h5>
+			    	<input class="form-control" id="number" name="number" placeholder="number" type="text" required><br>
+		  		</div>
+		  		<div class="form-group">        
+		    		<h5>Name</h5>
+			    	<input class="form-control" id="name" name="name" placeholder="name" type="text" required>	
+		    	</div>
+		  		<div class="form-group">        
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign up</button>
+				</div>		   
+		  	  </form>
+		  	</div>      
+		</div>
+	</div>
+			
+	<div class="modal fade" id="Signup_Modal" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4><span class="glyphicon glyphicon-lock"></span> 회원가입 결과</h4>
+	      </div>
+	      <div class="modal-body">
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/blog.js"></script>
+	
+	
+
+</body>
+</html>
