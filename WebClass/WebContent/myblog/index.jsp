@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="org.dimigo.vo.UserVO" %>    
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../css/blog.css">
 <link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" href="/WebClass/css/ffooter.css">
 
 </head>
 <body>
@@ -19,17 +24,48 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span> 
 	      </button>
-	      <a class="navbar-brand" href="#myPage">SJY</a>
+	      
+	     
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#home">HOME</a></li>
-	        <li><a href="#who">WHO</a></li>
-	        <li><a href="#what">WHAT</a></li>
-	        <li><a href="#dream">DREAM</a></li>
-	        
-	        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+	      <ul class="nav navbar-nav navbar-left">
+	        <li><a href="/WebClass/myblog/index.jsp">HOME</a></li>
 	      </ul>
+	      
+	    </div>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    	<%@ include file="../jsp/blogmenu.jsp" %>
+  	
+		    <%-- 세션이 없는 경우 --%>
+		    <%
+					UserVO user=(UserVO)session.getAttribute("user");
+					if(user==null){
+		
+			%>
+				<ul class="nav navbar-nav navbar-right">
+		    	<li><a class="text-bold text-white" style="text-decoration: none" href="/WebClass/bloglogin">Sign in</a></li>
+		    	<!-- <li><span class="text-bold text-white">&nbsp; or &nbsp;</span></li>   -->
+		    	<li><a class="text-bold text-white" style="text-decoration: none" href="signup.html">Sign up</a></li>
+		    	</ul>
+			<% } else { %>
+			<%-- 세션이 있는 경우 --%>
+			    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+			    <li class="nav-item dropdown">
+			      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    	<%= user.getName()+ "님"%>	      </a>
+			      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+			      	<form action="/WebClass/blogout" method="post">
+			      		<button type="submit" class="dropdown-item">Sign out</button>
+			       	</form>
+			       	<div class="dropdown-divider"></div>
+			        <button type="button" class="dropdown-item">Action1</button>
+			        <button type="button" class="dropdown-item">Action2</button>
+			      </div>
+			    </li>
+			    </ul>
+			    
+			    <% } %>
+		 
 	    </div>
 	  </div>
 	</nav>
@@ -44,7 +80,7 @@
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item active">
-	      <img src="/WebContent/image/맥북.jpg" alt="image">
+	      <img src="/WebClass/image/mac.jpg" alt="image">
 	      <div class="carousel-caption">
 	        <h3>Welcome</h3>
 	        <p>Thank you for visiting my blog.</p>
@@ -52,7 +88,7 @@
 	    </div>
 	
 	    <div class="item">
-	      <img src="../image/coding.jpg" alt="image">
+	      <img src="/WebClass/image/coding.jpg" alt="image">
 	      <div class="carousel-caption">
 	        <h3>Welcome</h3>
 	        <p>Thank you for visiting my blog.</p>
@@ -60,7 +96,7 @@
 	    </div>
 	
 	    <div class="item">
-	      <img src="../image/coding2.jpg" alt="image">
+	      <img src="/WebClass/image/coding2.jpg" alt="image">
 	      <div class="carousel-caption">
 	        <h3>Welcome</h3>
 	        <p>Thank you for visiting my blog.</p>
@@ -88,7 +124,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 				  <p><strong>PROFILE</strong></p><br>
-				  <img src="../image/1311신주연.jpg" class="img-circle person" alt="Random Name" width="200" height="255">
+				  <img src="../image/1311.jpg" class="img-circle person" alt="Random Name" width="200" height="255">
 				</div>
 				<div class="col-sm-4">
 				  <p><strong>이름 : 신주연</strong></p><br>
@@ -117,7 +153,7 @@
 	    <div class="row text-center">
 	      <div class="col-sm-4">
 	        <div class="thumbnail">
-	          <img src="/WebContent/image/영화2.jpg" alt="Paris" width="400" height="300">
+	          <img src="/WebClass/image/movie2.jpg" alt="Paris" width="400" height="300">
 	          <br>
 	          <p><strong>말할 수 없는 비밀 (Secret,2007)</strong></p>
 	          <p>2008.01.10 개봉</p>
@@ -125,7 +161,7 @@
 	      </div>
 	      <div class="col-sm-4">
 	        <div class="thumbnail">
-	          <img src="../image/뜨개질.jpg" alt="New York" width="400" height="300">
+	          <img src="/WebClass/image/aaa.jpg" alt="New York" width="400" height="300">
 	          <br>
 	          <p><strong>뜨개질하기</strong></p>
 	          <p>목도리 , 모자</p> 
@@ -133,7 +169,7 @@
 	      </div>
 	      <div class="col-sm-4">
 	        <div class="thumbnail">
-	          <img src="../image/EXO1.jpg" alt="San Francisco" width="400" height="300">
+	          <img src="/WebClass/image/EXO1.jpg" alt="San Francisco" width="400" height="300">
 	          <br>
 	          <p><strong>EXO</strong></p>
 	          <p>'KokoBop'</p>    
@@ -152,19 +188,19 @@
 				  <p><strong>1.Education</strong></p><br>
 				  <p>교육봉사나 멘토링 활동 등</p>
 				  <p>학생들 가르쳐보기</p>	
-				  <img src="../image/교육.jpg"  class="img-circle dream" alt="Random Name">
+				  <img src="/WebClass/image/study.jpg"  class="img-circle dream" alt="Random Name">
 				</div>
 				<div class="col-sm-4">
 				  <p><strong>2.Piano</strong></p><br>
 				  <p>취미생활로 피아노 배우고 그랜드피아노로 </p>
 				  <p>말할 수 없는 비밀 OST 완곡하기</p>
-				  <img src="../image/피아노.jpg" class="img-circle dream" alt="Random Name">
+				  <img src="/WebClass/image/piano.jpg" class="img-circle dream" alt="Random Name">
 				</div>
 				<div class="col-sm-4">
 				  <p><strong>3.Travel</strong></p><br>
 				  <p>혼자서 해외여행 가보기</p>
 				  <p>(미국,영국,일본)</p>
-				  <img src="../image/여행.jpg"  class="img-circle dream" alt="Random Name">
+				  <img src="/WebClass/image/travel.jpg"  class="img-circle dream" alt="Random Name">
 				</div>
 			</div>
 		</div>
@@ -184,3 +220,4 @@
 		
 </body>
 </html>
+    

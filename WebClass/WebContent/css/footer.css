@@ -1,30 +1,17 @@
-@CHARSET "EUC-KR";
-
-	
-	footer {
-	    background-color: #2d2d30;
-	    color: #f5f5f5;
-	    padding: 15px;
-	}
-	
-	footer a {
-	    color: #f5f5f5;
-	}
-	
-	footer a:hover {
-	    color: #777;
-	    text-decoration: none;
-	}
-		
-	
-	
-	.modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 25px;
+html {
+  position: relative;
+  min-height: 100%;
 }
-
-.modal-header, .modal-body {
-    padding: 20px 30px;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 0px; /* Vertically center the text there */
+  background-color: #f5f5f5;
 }
