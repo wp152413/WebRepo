@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../css/blog.css">
-<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="/WebClass/css/blog.css">
+<link rel="stylesheet" type="text/css" href="/WebClass/css/footer.css">
 <link rel="stylesheet" href="/WebClass/css/ffooter.css">
 
 </head>
@@ -45,7 +45,7 @@
 				<ul class="nav navbar-nav navbar-right">
 		    	<li><a class="text-bold text-white" style="text-decoration: none" href="/WebClass/bloglogin">Sign in</a></li>
 		    	<!-- <li><span class="text-bold text-white">&nbsp; or &nbsp;</span></li>   -->
-		    	<li><a class="text-bold text-white" style="text-decoration: none" href="signup.html">Sign up</a></li>
+		    	<li><a class="text-bold text-white" style="text-decoration: none" href="/WebClass/myblog/signup.html">Sign up</a></li>
 		    	</ul>
 			<% } else { %>
 			<%-- 세션이 있는 경우 --%>
@@ -124,7 +124,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 				  <p><strong>PROFILE</strong></p><br>
-				  <img src="../image/1311.jpg" class="img-circle person" alt="Random Name" width="200" height="255">
+				  <img src="/WebClass/image/1311.jpg" class="img-circle person" alt="Random Name" width="200" height="255">
 				</div>
 				<div class="col-sm-4">
 				  <p><strong>이름 : 신주연</strong></p><br>

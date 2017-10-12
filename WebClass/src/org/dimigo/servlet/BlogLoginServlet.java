@@ -51,7 +51,7 @@ public class BlogLoginServlet extends HttpServlet {
 		
 		// id, pwd 정확성 체크
 		//boolean result=false;
-		String realId="sss";
+		String realId="test@naver.com";
 		if(realId.equals(id)){
 			//세션에 사용자 정보생성
 			HttpSession session=request.getSession();

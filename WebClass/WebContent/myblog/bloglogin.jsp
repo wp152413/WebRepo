@@ -7,8 +7,8 @@
 	<title>Login화면</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/blog.css">
-	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/WebClass/css/blog.css">
+	<link rel="stylesheet" type="text/css" href="/WebClass/css/footer.css">
 </head>
 <body>
 
