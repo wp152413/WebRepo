@@ -5,11 +5,12 @@ public class UserVO {
 	private String id;
 	private String name;
 	private String nickname;
-	
+	private String pwd;
+	  
 	public UserVO(){
 				
 	}
-
+ 
 	public UserVO(String id, String name, String nickname) {
 		this.id = id;
 		this.name = name;
@@ -34,10 +35,18 @@ public class UserVO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
+
+	public void setPwd(String pwd) {
+		this.pwd=pwd;
+	}
 	
-	
-	
-	
-	
+	public String getPwd(){
+		return pwd;
+	}
+
+	@Override
+	public String toString() {
+		return "UserVO [id=" + id + ", name=" + name + ", nickname=" + nickname + ", pwd=" + pwd + "]";
+	}
 	
 }
